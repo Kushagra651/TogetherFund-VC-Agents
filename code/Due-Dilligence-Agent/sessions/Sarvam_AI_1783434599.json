@@ -1,0 +1,54 @@
+{
+  "company": "Sarvam AI",
+  "description": "indian LLM for regional languages",
+  "founder_linkedin": "https://www.linkedin.com/in/vivekraghavan/",
+  "timestamp": "2026-07-07T14:29:59.766508",
+  "findings": [
+    {
+      "step": 1,
+      "query": "\"Sarvam AI competitors India\"",
+      "snippet": "- Search failed: https://links.duckduckgo.com/d.js?q=%22Sarvam+AI+competitors+India%22&kl=wt-wt&l=wt-wt&p=&s=0&df=&vqd=4-248691482117523291205942582550434633942&ex=-1 202 Ratelimit ()",
+      "full": "- Search failed: https://links.duckduckgo.com/d.js?q=%22Sarvam+AI+competitors+India%22&kl=wt-wt&l=wt-wt&p=&s=0&df=&vqd=4-248691482117523291205942582550434633942&ex=-1 202 Ratelimit ()"
+    },
+    {
+      "step": 2,
+      "query": "Sarvam AI funding rounds investors",
+      "snippet": "- Search failed: https://links.duckduckgo.com/d.js?q=Sarvam+AI+funding+rounds+investors&kl=wt-wt&l=wt-wt&p=&s=0&df=&vqd=4-305756905944994471439975122825041339823&ex=-1 202 Ratelimit ()",
+      "full": "- Search failed: https://links.duckduckgo.com/d.js?q=Sarvam+AI+funding+rounds+investors&kl=wt-wt&l=wt-wt&p=&s=0&df=&vqd=4-305756905944994471439975122825041339823&ex=-1 202 Ratelimit ()"
+    },
+    {
+      "step": 3,
+      "query": "Vivek Raghavan founder background",
+      "snippet": "- Search failed: https://links.duckduckgo.com/d.js?q=Vivek+Raghavan+founder+background&kl=wt-wt&l=wt-wt&p=&s=0&df=&vqd=4-249700487579602038643215021029710441748&ex=-1 202 Ratelimit ()",
+      "full": "- Search failed: https://links.duckduckgo.com/d.js?q=Vivek+Raghavan+founder+background&kl=wt-wt&l=wt-wt&p=&s=0&df=&vqd=4-249700487579602038643215021029710441748&ex=-1 202 Ratelimit ()"
+    },
+    {
+      "step": 4,
+      "query": "Indian LLM market size estimate",
+      "snippet": "- Search failed: https://links.duckduckgo.com/d.js?q=Indian+LLM+market+size+estimate&kl=wt-wt&l=wt-wt&p=&s=0&df=&vqd=4-49795370735948714622608117799823853185&ex=-1 202 Ratelimit ()",
+      "full": "- Search failed: https://links.duckduckgo.com/d.js?q=Indian+LLM+market+size+estimate&kl=wt-wt&l=wt-wt&p=&s=0&df=&vqd=4-49795370735948714622608117799823853185&ex=-1 202 Ratelimit ()"
+    },
+    {
+      "step": 5,
+      "query": "Sarvam AI recent news and updates",
+      "snippet": "- Search failed: https://links.duckduckgo.com/d.js?q=Sarvam+AI+recent+news+and+updates&kl=wt-wt&l=wt-wt&p=&s=0&df=&vqd=4-296644012167535759349986575815190395605&ex=-1 202 Ratelimit ()",
+      "full": "- Search failed: https://links.duckduckgo.com/d.js?q=Sarvam+AI+recent+news+and+updates&kl=wt-wt&l=wt-wt&p=&s=0&df=&vqd=4-296644012167535759349986575815190395605&ex=-1 202 Ratelimit ()"
+    }
+  ],
+  "memo": {
+    "market": "The Indian LLM market size estimate is unknown due to lack of available data. The opportunity for an Indian LLM for regional languages may be significant, but its scope is unclear. Further research is needed to understand the market potential.",
+    "competition": "The competitive landscape for Sarvam AI in India is unknown due to search failures. No information is available on the number of competitors or their market share. This lack of transparency makes it difficult to assess the company's positioning.",
+    "founder": "The background and credibility of Vivek Raghavan, the founder of Sarvam AI, are unknown due to search failures. No information is available on his experience or track record. This lack of information raises concerns about the founder's ability to lead the company.",
+    "traction": "No traction signals were found for Sarvam AI due to search failures. There is no available information on the company's funding rounds, investors, or recent news and updates. This lack of transparency makes it difficult to assess the company's progress.",
+    "red_flags": "The lack of available information on Sarvam AI, its founder, and the market raises significant concerns. The search failures may indicate a lack of online presence or visibility, which could be a red flag. Further research is needed to understand the reasons behind these search failures.",
+    "verdict": "The overall investment signal for Sarvam AI is unclear due to the lack of available data. The company's potential in the Indian LLM market for regional languages is unknown, and the competitive landscape is unclear. The lack of information on the founder's background and the company's traction raises concerns, making it difficult to recommend an investment. More research is needed to make an informed decision.",
+    "confidence": "Low",
+    "sources": [
+      "Sarvam AI competitors India",
+      "Sarvam AI funding rounds investors",
+      "Vivek Raghavan founder background",
+      "Indian LLM market size estimate",
+      "Sarvam AI recent news and updates"
+    ]
+  }
+}

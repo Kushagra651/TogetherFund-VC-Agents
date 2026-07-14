@@ -1,0 +1,102 @@
+[
+  {
+    "name": "Sarvam AI",
+    "website": "sarvam.ai",
+    "linkedin_url": "https://www.linkedin.com/company/sarvam-ai",
+    "sector": "AI/LLM",
+    "founded": 2023,
+    "headcount_history": [18, 22, 27, 34, 41, 38],
+    "last_funding": "Series A – $41M",
+    "github": "sarvamai"
+  },
+  {
+    "name": "Superjoin",
+    "website": "superjoin.ai",
+    "linkedin_url": "https://www.linkedin.com/company/superjoin-ai",
+    "sector": "Data/Productivity",
+    "founded": 2022,
+    "headcount_history": [8, 11, 14, 17, 19, 21],
+    "last_funding": "Seed – $3.2M",
+    "github": null
+  },
+  {
+    "name": "Hyperfeeds",
+    "website": "hyperfeeds.ai",
+    "linkedin_url": "https://www.linkedin.com/company/hyperfeeds",
+    "sector": "AI/Media",
+    "founded": 2023,
+    "headcount_history": [5, 7, 9, 11, 10, 9],
+    "last_funding": "Pre-Seed – $800K",
+    "github": null
+  },
+  {
+    "name": "Kula",
+    "website": "kula.ai",
+    "linkedin_url": "https://www.linkedin.com/company/kula-ai",
+    "sector": "HR Tech",
+    "founded": 2021,
+    "headcount_history": [31, 38, 44, 47, 43, 40],
+    "last_funding": "Series A – $12M",
+    "github": null
+  },
+  {
+    "name": "Toplyne",
+    "website": "toplyne.io",
+    "linkedin_url": "https://www.linkedin.com/company/toplyne",
+    "sector": "Revenue AI",
+    "founded": 2021,
+    "headcount_history": [22, 25, 28, 26, 24, 23],
+    "last_funding": "Series A – $17M",
+    "github": null
+  },
+  {
+    "name": "Fieldproxy",
+    "website": "fieldproxy.com",
+    "linkedin_url": "https://www.linkedin.com/company/fieldproxy",
+    "sector": "Field Ops SaaS",
+    "founded": 2020,
+    "headcount_history": [14, 17, 20, 24, 27, 30],
+    "last_funding": "Seed – $2.5M",
+    "github": null
+  },
+  {
+    "name": "Zwende",
+    "website": "zwende.com",
+    "linkedin_url": "https://www.linkedin.com/company/zwende",
+    "sector": "D2C/Ecommerce",
+    "founded": 2019,
+    "headcount_history": [19, 21, 20, 18, 16, 14],
+    "last_funding": "Seed – $1.8M",
+    "github": null
+  },
+  {
+    "name": "Gan.ai",
+    "website": "gan.ai",
+    "linkedin_url": "https://www.linkedin.com/company/gan-ai",
+    "sector": "AI/Video",
+    "founded": 2021,
+    "headcount_history": [9, 12, 15, 17, 18, 20],
+    "last_funding": "Seed – $5M",
+    "github": null
+  },
+  {
+    "name": "Invsto",
+    "website": "invsto.com",
+    "linkedin_url": "https://www.linkedin.com/company/invsto",
+    "sector": "Fintech",
+    "founded": 2020,
+    "headcount_history": [11, 13, 14, 13, 12, 11],
+    "last_funding": "Pre-Seed – $600K",
+    "github": null
+  },
+  {
+    "name": "Frontrow",
+    "website": "frontrow.in",
+    "linkedin_url": "https://www.linkedin.com/company/frontrow-india",
+    "sector": "EdTech",
+    "founded": 2020,
+    "headcount_history": [45, 52, 61, 58, 51, 44],
+    "last_funding": "Series B – $14M",
+    "github": null
+  }
+]

@@ -1,0 +1,54 @@
+{
+  "company": "Sarvam AI",
+  "description": "indian llm for regional language",
+  "founder_linkedin": "https://www.linkedin.com/in/vivekraghavan/",
+  "timestamp": "2026-07-07T14:47:03.097158",
+  "findings": [
+    {
+      "step": 1,
+      "query": "\"Indian LLM competitors market players\"",
+      "snippet": "- Search failed: HTTP Error 401: Unauthorized ()",
+      "full": "- Search failed: HTTP Error 401: Unauthorized ()"
+    },
+    {
+      "step": 2,
+      "query": "Sarvam AI funding rounds investors",
+      "snippet": "- Search failed: HTTP Error 401: Unauthorized ()",
+      "full": "- Search failed: HTTP Error 401: Unauthorized ()"
+    },
+    {
+      "step": 3,
+      "query": "Vivek Raghavan founder background India",
+      "snippet": "- Search failed: HTTP Error 401: Unauthorized ()",
+      "full": "- Search failed: HTTP Error 401: Unauthorized ()"
+    },
+    {
+      "step": 4,
+      "query": "Indian LLM market size estimate",
+      "snippet": "- Search failed: HTTP Error 401: Unauthorized ()",
+      "full": "- Search failed: HTTP Error 401: Unauthorized ()"
+    },
+    {
+      "step": 5,
+      "query": "Sarvam AI recent news India",
+      "snippet": "- Search failed: HTTP Error 401: Unauthorized ()",
+      "full": "- Search failed: HTTP Error 401: Unauthorized ()"
+    }
+  ],
+  "memo": {
+    "market": "Unfortunately, we were unable to determine the market size and opportunity for Indian LLMs due to search failures. The potential for growth in this space is likely significant given the importance of regional languages in India. However, we lack concrete data to support this assertion.",
+    "competition": "We were unable to identify key competitors in the Indian LLM market due to search errors. This lack of information makes it difficult to assess the competitive landscape. The absence of data on market players is a significant concern.",
+    "founder": "Due to search failures, we could not verify the background or credibility of Vivek Raghavan, the founder of Sarvam AI. This lack of information raises concerns about the founder's ability to lead the company. We cannot assess the founder's experience or track record.",
+    "traction": "No traction signals were found due to search failures, which makes it challenging to assess the company's progress or adoption. We lack data on funding rounds, recent news, or user engagement. This absence of information is a significant red flag.",
+    "red_flags": "The inability to access information on the company, its founder, and the market raises significant concerns. The search failures and lack of data availability are major red flags. These issues suggest potential risks or concerns that need to be addressed.",
+    "verdict": "Based on the limited information available, we cannot provide a positive investment signal. The lack of data on the market, competition, founder, and traction makes it difficult to assess the company's potential. We require more information to make an informed decision. The search failures and absence of data are major concerns.",
+    "confidence": "Low",
+    "sources": [
+      "Indian LLM competitors market players",
+      "Sarvam AI funding rounds investors",
+      "Vivek Raghavan founder background India",
+      "Indian LLM market size estimate",
+      "Sarvam AI recent news India"
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+# Install individually on Windows/Anaconda to avoid Rust/cmake build errors
+# pip install duckduckgo-search==5.3.1b1
+# pip install streamlit
+# pip install pydantic
+# pip install python-dotenv
+# pip install groq
+# pip install tavily-python
+
+duckduckgo-search==5.3.1b1
+streamlit==1.36.0
+pydantic==2.7.4
+python-dotenv==1.0.1
+groq==0.9.0
+tavily-python
