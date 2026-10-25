@@ -1,2 +1,9 @@
 demo/*.mp4
 *.env
+venv/
+kpmg_submission/
+code/Due-Dilligence-Agent/cache/
+code/Due-Dilligence-Agent/sessions/
+code/Portfolio-health-monitor/data/portfolio.db
+code/Portfolio-health-monitor/.env
+code/Due-Dilligence-Agent/.env

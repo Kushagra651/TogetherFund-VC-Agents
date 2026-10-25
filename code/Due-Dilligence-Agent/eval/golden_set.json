@@ -1,0 +1,47 @@
+[
+  {
+    "company": "Perplexity AI",
+    "description": "AI-powered answer engine that combines search with LLM-generated, cited responses",
+    "founder_linkedin": "https://www.linkedin.com/in/aravind-srinivas-16051991/",
+    "expected_founder_keyword": "Srinivas",
+    "expected_funding_keyword": "Series",
+    "expected_product_keywords": ["search", "answer"],
+    "known_risk_flag_keywords": ["competition", "Google"]
+  },
+  {
+    "company": "Groq",
+    "description": "Designs custom LPU chips for fast, low-latency LLM inference",
+    "founder_linkedin": "https://www.linkedin.com/in/jonathan-ross-66a552a/",
+    "expected_founder_keyword": "Ross",
+    "expected_funding_keyword": "Series",
+    "expected_product_keywords": ["inference", "chip"],
+    "known_risk_flag_keywords": ["Nvidia", "capital"]
+  },
+  {
+    "company": "Mistral AI",
+    "description": "French open-weight large language model lab",
+    "founder_linkedin": "https://www.linkedin.com/in/arthur-mensch/",
+    "expected_founder_keyword": "Mensch",
+    "expected_funding_keyword": "Series",
+    "expected_product_keywords": ["open", "model"],
+    "known_risk_flag_keywords": ["competition", "OpenAI"]
+  },
+  {
+    "company": "Together AI",
+    "description": "Cloud platform for training and running open-source AI models at scale",
+    "founder_linkedin": "https://www.linkedin.com/in/vipulved/",
+    "expected_founder_keyword": "Prakash",
+    "expected_funding_keyword": "Series",
+    "expected_product_keywords": ["cloud", "open"],
+    "known_risk_flag_keywords": ["competition", "cost"]
+  },
+  {
+    "company": "Sarvam AI",
+    "description": "Builds foundation models and voice AI for Indian languages",
+    "founder_linkedin": "https://www.linkedin.com/in/vivraghu/",
+    "expected_founder_keyword": "Raghavan",
+    "expected_funding_keyword": "Series",
+    "expected_product_keywords": ["Indian", "language"],
+    "known_risk_flag_keywords": ["competition", "regulation"]
+  }
+]

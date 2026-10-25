@@ -9,7 +9,7 @@
 submission/
 ├── SUBMISSION.md                        ← you are here
 │
-├── dd-agent/                            ← Tool 1: Due Diligence Research Agent
+├── code/Due-Dilligence-Agent/                            ← Tool 1: Due Diligence Research Agent
 │   ├── app.py                           (Streamlit frontend)
 │   ├── core.py                          (agentic loop)
 │   ├── tools.py                         (Tavily search + disk cache)
@@ -19,7 +19,7 @@ submission/
 │   ├── requirements.txt
 │   └── README.md
 │
-├── portfolio-health-monitor/            ← Tool 2: Portfolio Health Monitor
+├── code/Portfolio-health-monitor/            ← Tool 2: Portfolio Health Monitor
 │   ├── dashboard.py                     (Streamlit frontend)
 │   ├── app/
 │   │   ├── monitor.py                   (agent loop + Groq analysis)
@@ -49,21 +49,21 @@ conflict-free.
 
 ```bash
 # activate your venv
-C:\Users\kusha\OneDrive\Desktop\war\venv\Scripts\activate
+source venv/bin/activate   # Windows: venv\Scripts\activate
 
 # Tool 1 dependencies
-cd dd-agent
+cd code/Due-Dilligence-Agent
 pip install -r requirements.txt
 
 # Tool 2 dependencies
-cd ../portfolio-health-monitor
+cd ../Portfolio-health-monitor
 pip install -r requirements.txt
 ```
 
 ### Tool 1 — DD Research Agent
 
 ```bash
-cd dd-agent
+cd code/Due-Dilligence-Agent
 cp .env.example .env        # add GROQ_API_KEY and TAVILY_API_KEY
 streamlit run app.py
 # opens at http://localhost:8501
@@ -80,7 +80,7 @@ read the structured memo on the right.
 ### Tool 2 — Portfolio Health Monitor
 
 ```bash
-cd portfolio-health-monitor
+cd code/Portfolio-health-monitor
 cp .env.example .env        # add GROQ_API_KEY
 streamlit run dashboard.py
 # opens at http://localhost:8501
@@ -124,19 +124,6 @@ code, not in a framework config file.
 **Why Streamlit over React:** Eliminates a separate frontend build step, SSE
 streaming setup, and npm dependency chain. The live log console and Plotly
 charts cover everything needed for a compelling demo.
-
----
-
-## What I'd do with two more weeks
-
-**DD Agent:** Replace Tavily with Crunchbase API for richer funding data.
-Add PostgreSQL session store so the firm builds a cumulative research library.
-Wire into email/form intake so pitches trigger DD runs automatically.
-
-**Portfolio Monitor:** Proxycurl for real LinkedIn headcount data. Slack
-webhook for automatic red-status alerts. Expand from 10 seed companies to
-all 59 Together Fund portfolio companies (no code change — just additions to
-companies.json).
 
 ---
 

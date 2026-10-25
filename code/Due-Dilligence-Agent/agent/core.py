@@ -7,11 +7,13 @@ from dotenv import load_dotenv
 from .tools import search, format_results
 from .prompts import SYSTEM, next_query_prompt, synthesis_prompt
 from .memo_schema import DDMemo
+from .logging_utils import log_event
 
 load_dotenv()
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 def _llm(prompt: str) -> str:
+    start = time.time()
     msg = client.chat.completions.create(
         model="llama-3.3-70b-versatile",
         max_tokens=1024,
@@ -20,7 +22,10 @@ def _llm(prompt: str) -> str:
             {"role": "user", "content": prompt}
         ],
     )
-    return msg.choices[0].message.content.strip()
+    content = msg.choices[0].message.content.strip()
+    log_event("groq_llm", prompt, len(content), (time.time() - start) * 1000,
+               model="llama-3.3-70b-versatile")
+    return content
 
 def run_agent(company: str, description: str, founder_linkedin: str) -> Generator[dict, None, None]:
     """
