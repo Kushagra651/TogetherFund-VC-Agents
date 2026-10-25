@@ -218,6 +218,8 @@ from groq import Groq
 from dotenv import load_dotenv
 from app.models import SignalSnapshot, HealthSummary
 from app.database import save_report, has_recent_data
+from app.logging_utils import log_event
+from app.alerts import notify_if_red
 
 load_dotenv()
 logger = logging.getLogger(__name__)
@@ -228,12 +230,16 @@ client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 def _search(query: str, max_results: int = 5) -> list[dict]:
     """DuckDuckGo search with graceful rate-limit handling."""
+    start = time.time()
     try:
         time.sleep(1.2)  # avoid DDG rate limits
         with DDGS() as ddgs:
-            return list(ddgs.text(query, max_results=max_results))
+            results = list(ddgs.text(query, max_results=max_results))
+        log_event("ddg_search", query, len(results), (time.time() - start) * 1000)
+        return results
     except Exception as e:
         logger.warning(f"Search failed for '{query}': {e}")
+        log_event("ddg_search", query, 0, (time.time() - start) * 1000, error=str(e))
         return []
 
 
@@ -334,9 +340,10 @@ Respond ONLY with valid JSON matching this schema exactly:
   "confidence": "high" | "medium" | "low"
 }}"""
 
+    start = time.time()
     try:
         response = client.chat.completions.create(
-            model="llama-3.3-70b-versatile",
+            model="llama-3.1-8b-instant",
             max_tokens=600,
             messages=[{"role": "user", "content": prompt}]
         )
@@ -348,6 +355,8 @@ Respond ONLY with valid JSON matching this schema exactly:
                 raw = raw[4:]
         data = json.loads(raw.strip())
         log(f"[CLAUDE] Status: {data['status'].upper()} — {data['headline']}")
+        log_event("groq_llm", prompt, len(raw), (time.time() - start) * 1000,
+                   model="llama-3.1-8b-instant", company=company["name"])
         return HealthSummary(
             company_name=company["name"],
             timestamp=datetime.utcnow().isoformat(),
@@ -355,6 +364,8 @@ Respond ONLY with valid JSON matching this schema exactly:
         )
     except Exception as e:
         logger.error(f"Claude analysis failed for {company['name']}: {e}")
+        log_event("groq_llm", prompt, 0, (time.time() - start) * 1000,
+                   model="llama-3.1-8b-instant", company=company["name"], error=str(e))
         return HealthSummary(
             company_name=company["name"],
             status="yellow",
@@ -392,6 +403,7 @@ def run_company_analysis(company: dict, log_cb=None, force: bool = False) -> dic
     snapshot = collect_signals(company, log_cb=log_cb)
     health = analyze_with_claude(company, snapshot, log_cb=log_cb)
     save_report(name, snapshot.model_dump(), health.model_dump())
+    notify_if_red(name, health.status, health.headline)
     log(f"[DONE] {name} saved to DB ✓\n")
 
     return {"snapshot": snapshot.model_dump(), "health": health.model_dump()}
