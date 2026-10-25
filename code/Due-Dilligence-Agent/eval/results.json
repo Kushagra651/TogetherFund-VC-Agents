@@ -1,1 +1,80 @@
-[]
+[
+  {
+    "timestamp": "2026-10-25T12:39:49.699107+00:00",
+    "n_companies": 5,
+    "memos_generated": 5,
+    "field_accuracy": {
+      "founder": 0.8,
+      "funding": 1.0,
+      "product": 1.0
+    },
+    "overall_memo_accuracy": 0.933,
+    "per_company": [
+      {
+        "company": "Perplexity AI",
+        "memo_generated": true,
+        "founder_correct": true,
+        "funding_correct": true,
+        "product_correct": true,
+        "confidence": "Medium",
+        "field_scores": {
+          "founder": 1,
+          "funding": 1,
+          "product": 1
+        }
+      },
+      {
+        "company": "Groq",
+        "memo_generated": true,
+        "founder_correct": true,
+        "funding_correct": true,
+        "product_correct": true,
+        "confidence": "Medium",
+        "field_scores": {
+          "founder": 1,
+          "funding": 1,
+          "product": 1
+        }
+      },
+      {
+        "company": "Mistral AI",
+        "memo_generated": true,
+        "founder_correct": true,
+        "funding_correct": true,
+        "product_correct": true,
+        "confidence": "Medium",
+        "field_scores": {
+          "founder": 1,
+          "funding": 1,
+          "product": 1
+        }
+      },
+      {
+        "company": "Together AI",
+        "memo_generated": true,
+        "founder_correct": true,
+        "funding_correct": true,
+        "product_correct": true,
+        "confidence": "Medium",
+        "field_scores": {
+          "founder": 1,
+          "funding": 1,
+          "product": 1
+        }
+      },
+      {
+        "company": "Sarvam AI",
+        "memo_generated": true,
+        "founder_correct": false,
+        "funding_correct": true,
+        "product_correct": true,
+        "confidence": "Medium",
+        "field_scores": {
+          "founder": 0,
+          "funding": 1,
+          "product": 1
+        }
+      }
+    ]
+  }
+]
