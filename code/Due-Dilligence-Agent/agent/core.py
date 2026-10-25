@@ -12,10 +12,17 @@ from .logging_utils import log_event
 load_dotenv()
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
+# Groq periodically deprecates/renames model IDs (we've hit this twice already).
+# Configurable via env so a future deprecation is a one-line .env change, not
+# a code hunt across every call site. openai/gpt-oss-120b is Groq's current
+# flagship open-weight model with structured_outputs/json_mode/tools support,
+# which the JSON-synthesis step here relies on.
+GROQ_MODEL = os.getenv("GROQ_MODEL", "openai/gpt-oss-120b")
+
 def _llm(prompt: str) -> str:
     start = time.time()
     msg = client.chat.completions.create(
-        model="llama-3.1-8b-instant",
+        model=GROQ_MODEL,
         max_tokens=1024,
         messages=[
             {"role": "system", "content": SYSTEM},
@@ -24,7 +31,7 @@ def _llm(prompt: str) -> str:
     )
     content = msg.choices[0].message.content.strip()
     log_event("groq_llm", prompt, len(content), (time.time() - start) * 1000,
-               model="llama-3.1-8b-instant")
+               model=GROQ_MODEL)
     return content
 
 def run_agent(company: str, description: str, founder_linkedin: str) -> Generator[dict, None, None]:

@@ -225,6 +225,12 @@ load_dotenv()
 logger = logging.getLogger(__name__)
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
+# Configurable so a Groq model deprecation (has happened twice already) is a
+# one-line .env change instead of a code hunt. openai/gpt-oss-120b is Groq's
+# current flagship open-weight model with structured_outputs/json_mode
+# support, which the JSON health-summary output here relies on.
+GROQ_MODEL = os.getenv("GROQ_MODEL", "openai/gpt-oss-120b")
+
 
 # ── Signal Collection ──────────────────────────────────────────────────────────
 
@@ -343,7 +349,7 @@ Respond ONLY with valid JSON matching this schema exactly:
     start = time.time()
     try:
         response = client.chat.completions.create(
-            model="llama-3.1-8b-instant",
+            model=GROQ_MODEL,
             max_tokens=600,
             messages=[{"role": "user", "content": prompt}]
         )
@@ -356,7 +362,7 @@ Respond ONLY with valid JSON matching this schema exactly:
         data = json.loads(raw.strip())
         log(f"[CLAUDE] Status: {data['status'].upper()} — {data['headline']}")
         log_event("groq_llm", prompt, len(raw), (time.time() - start) * 1000,
-                   model="llama-3.1-8b-instant", company=company["name"])
+                   model=GROQ_MODEL, company=company["name"])
         return HealthSummary(
             company_name=company["name"],
             timestamp=datetime.utcnow().isoformat(),
@@ -365,7 +371,7 @@ Respond ONLY with valid JSON matching this schema exactly:
     except Exception as e:
         logger.error(f"Claude analysis failed for {company['name']}: {e}")
         log_event("groq_llm", prompt, 0, (time.time() - start) * 1000,
-                   model="llama-3.1-8b-instant", company=company["name"], error=str(e))
+                   model=GROQ_MODEL, company=company["name"], error=str(e))
         return HealthSummary(
             company_name=company["name"],
             status="yellow",
